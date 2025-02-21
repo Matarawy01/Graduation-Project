@@ -1,0 +1,66 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hospital-alert {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.hospital-box {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.accident-table {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2196F3;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+}
+
+.hospital-info{
+    font-size: medium;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Accident Monitoring System</h1>
+        
+        <!-- Accident Data Table -->
+        <div class="accident-table">
+            <h2>Accident Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Car ID</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Timestamp</th>
+                        <th>Nearest Hospital</th>
+                        <th>Hospital Address</th>
+                        <th>Hospital Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for accident in all_accidents %}
+                    <tr>
+                        <td>{{ accident.car_id }}</td>
+                        <td>{{ accident.latitude }}</td>
+                        <td>{{ accident.longitude }}</td>
+                        <td>{{ accident.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                        <td>{{ accident.nearest_hospital }}</td>
+                        <td>{{ accident.hospital_address }}</td>
+                        <td>{{ accident.hospital_phone }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
